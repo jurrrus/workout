@@ -24,6 +24,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^1.1.6",
     "node-sass": "^4.9.1",
+    "harp": "^0.25.0",
     "npm": "^6.1.0",
     "react": "^0.14.9",
     "react-bootstrap": "^0.32.1",
