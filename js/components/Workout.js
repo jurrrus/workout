@@ -6,14 +6,11 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-import TopMenu from "./TopMenu";
-import { privateWorkouts } from './base';
 
 class Workout extends Component {
 
     render(){
         return <div className="container">
-            <TopMenu />
             <div className="container">
                 <div className="container">current activity</div>
                 <div><h1>TIMER</h1></div>

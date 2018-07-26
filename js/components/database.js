@@ -1,7 +1,8 @@
-const privateWorkouts = [
+export default [
     {
         id: 1,
-        name: 'private workout1',
+        author: 'User',
+        name: 'private workout 1',
         public: false,
         sets: 1,
         tags: [],
@@ -14,50 +15,48 @@ const privateWorkouts = [
         ]
     }, {
         id: 2,
-        name: 'private workout2',
+        author: 'User',
+        name: 'private workout 2',
         public: true,
         sets: 1,
         tags: [],
         workout: [
             ['prepare', 10],
-            ['work', 15],
+            ['work', 20],
             ['rest', 5],
-            ['work', 15],
-            ['cool down', 15]
+            ['work', 20],
+            ['cool down', 30]
         ]
     }, {
         id: 3,
-        name: 'private workout3',
+        author: 'User',
+        name: 'private workout 3',
         public: false,
         sets: 1,
         tags: [],
         workout: [
-            ['prepare', 10],
-            ['work', 15],
-            ['rest', 5],
-            ['work', 15],
-            ['cool down', 15]
+            ['prepare', 30],
+            ['work', 10],
+            ['rest', 1],
+            ['work', 10],
+            ['cool down', 5]
         ]
-    }
-];
-
-const publicWorkouts = [
-    {
+    }, {
         id: 4,
-        name: 'public workout1',
+        author: 'Andżej',
+        name: 'public workout I',
         public: true,
         sets: 1,
         tags: [],
         workout: [
             ['prepare', 10],
-            ['work', 15],
-            ['rest', 5],
             ['work', 15],
             ['cool down', 15]
         ]
     }, {
         id: 5,
-        name: 'public workout2',
+        author: 'Janek',
+        name: 'public workout II',
         public: true,
         sets: 1,
         tags: [],
@@ -70,7 +69,8 @@ const publicWorkouts = [
         ]
     }, {
         id: 6,
-        name: 'public workout3',
+        author: 'Marian',
+        name: 'public workout III',
         public: true,
         sets: 1,
         tags: [],
@@ -79,9 +79,23 @@ const publicWorkouts = [
             ['work', 15],
             ['rest', 5],
             ['work', 15],
+            ['rest', 5],
+            ['work', 15],
             ['cool down', 15]
+        ]
+    }, {
+        id: 7,
+        author: 'Julian',
+        name: 'public workout IV',
+        public: true,
+        sets: 1,
+        tags: [],
+        workout: [
+            ['prepare', 100],
+            ['work', 185],
+            ['rest', 5],
+            ['work', 200],
+            ['cool down', 30]
         ]
     }
 ];
-
-export { privateWorkouts, publicWorkouts}

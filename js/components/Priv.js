@@ -7,13 +7,11 @@ import {
     NavLink,
 } from 'react-router-dom';
 
-import TopMenu from './TopMenu';
 import InspectWorkout from './InspectWorkout';
 
 class Priv extends Component {
     render(){
         return <div>
-            <TopMenu />
             <InspectWorkout />
             <button>
                 <Link to="/workout">Start</Link>

@@ -6,7 +6,7 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-import {privateWorkouts} from "./base";
+import {privateWorkouts} from "./database";
 
 class InspectWorkout extends Component {
     constructor(props){

@@ -6,31 +6,41 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-import { privateWorkouts } from './base';
 
 class YourWorkouts extends Component {
 
     constructor(props){
         super(props);
+        const { database } = props;
         this.state = {
-            privateWorkouts
+            database
+        }
+    }
+
+    componentWillReceiveProps(nextProps){
+        if (this.state.database.length !== nextProps.database.length){
+            this.setState({
+                database: nextProps.database
+            });
         }
     }
 
     render(){
-        const { privateWorkouts} = this.state;
+        const { database } = this.state;
 
         return <div className="container">
                 <h3>Your workouts</h3>
-                <hr></hr>
+                <hr/>
             <ul className="list">
                 {
-                    privateWorkouts.map(workout =>
-                        <li key={workout.id}>
-                            <Link to={`/workout/${workout.id}`}>{workout.name}</Link>
-                            {workout.workout.join(' ')}
-                            {workout.public ? 'Public': 'Private'}
-                        </li>
+                    database.map((workout,index) => {
+                            if (workout.author === 'User') {
+                                return <li key={index}>
+                                <Link to={`/workout/${workout.id}`}>{workout.name}</Link>
+                                {workout.workout.join(' ')}
+                                {workout.public ? 'Public': 'Private'}
+                            </li>}
+                    }
                     )
                 }
             </ul>
