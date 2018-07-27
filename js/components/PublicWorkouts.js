@@ -23,9 +23,7 @@ class PublicWorkouts extends Component {
                     database.map(workout => {
                             if (workout.author !== 'User') {
                                 return <li key={workout.id}>
-                                    <Link to={`/workout/${workout.id}`}>{workout.name}</Link>
-                                    {workout.workout.join(' ')}
-                                    {workout.public ? 'Public': 'Private'}
+                                    <Link to={`/workout/${workout.id}`}>{workout.name}</Link> {workout.workout.map(activity => activity.join(': ')).join(', ')} <b>{workout.public ? 'Public': 'Private'}</b>
                                 </li>}
                         }
                     )

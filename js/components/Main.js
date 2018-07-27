@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import YourWorkouts from './YourWorkouts';
 import PublicWorkouts from './PublicWorkouts';
 import AddWorkout from './AddWorkout';
+import Workout from './Workout';
 
 import database from './database';
 
@@ -23,6 +24,7 @@ class Main extends Component {
             addWorkoutVisibility: false,
             yourWorkoutsVisibility: true,
             publicWorkoutsVisibility: true,
+            activeWorkoutVisibility: false
         }
     }
 
@@ -37,7 +39,8 @@ class Main extends Component {
             <TopMenu />
             <AddWorkout addWorkout={this.onAddWorkoutHandler.bind(this)}/>
             <YourWorkouts database={this.state.database}/>
-            <PublicWorkouts  database={this.state.database}/>
+            <PublicWorkouts database={this.state.database}/>
+            <Workout activeWorkout={this.state.database[0].workout}/>
         </div>;
     }
 }

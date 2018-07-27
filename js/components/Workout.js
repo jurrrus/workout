@@ -9,6 +9,14 @@ import {
 
 class Workout extends Component {
 
+    constructor(props){
+        super(props);
+        const { activeWorkout } = props;
+        this.state = {
+            activeWorkout
+        }
+    }
+
     render(){
         return <div className="container">
             <div className="container">
